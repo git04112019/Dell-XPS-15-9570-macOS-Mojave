@@ -1,11 +1,16 @@
-#### This is a fork of LuletterSoul's XPS 9570 configuration with a few changes and updates:
+This is a fork of LuletterSoul's XPS 9570 configuration with a few changes and updates. I've tried multiple configurations for this machine and so far LuletterSoul's config has been working out very well for me (other configurations had some issues with sleep and trackpad)  
+
+#### Here's what I changed:
 * I replaced **FakeSMC** with **VirtualSMC** (solves the jumpy trackpad problem)
 * Updated WhateverGreen, AppleALC and Lilu to the latest versions
 * Updated VoodooI2C to an experimental version by @Erictoby – https://github.com/Erictoby/VoodooI2C/releases/ that addresses the issues with jumpy cursor and high CPU load
+* Remapped Caps Lock to Esc – I'm an avid vim user and it seems that there's no way to reliably remap it using software.
+  * remove **ACPI/patched/SSDT-CapsEscape.aml** if you don't want that
 * Decreased the **QuietAfterTyping** parameter of the **VoodooI2CHID** kext (the time it takes trackpad to become responsive again after typing) to 150ms
-* Disabled Turbo Boost while on battery (remove **DisableTurboOnBattery.kext** if you don't want that)
+* Disabled Turbo Boost when on battery power
+  * remove **DisableTurboOnBattery.kext** if you don't want that
 * Added **VerbStub by KNNSpeed** for better working audio (no more noise in the headphones)
-  * Requires additional setup – please refer to the _Post-Installation_ folder for instructions!
+  * requires additional setup – please refer to the _Post-Installation_ folder for instructions!
 * Added **VoltageShift.kext** and voltageshift binary by @sicreative – please refer to the _Post-Installation_ folder for instructions on how to set it up.
 * Changed the theme to clover-minimal-inverted by u/jo_ko_0 – https://i.redd.it/np7ai9qbdld21.png
 
